@@ -1,6 +1,6 @@
 = jpwgen
 
-A java/jbang password generator similar to pwgen on Linux.
+A java/jbang password generator similar to https://sourceforge.net/projects/pwgen/[pwgen].
 
 https://opensource.org/licenses/Apache-2.0[image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License]]
 

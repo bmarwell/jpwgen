@@ -1,4 +1,5 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
+//JAVA 11+
 //DEPS info.picocli:picocli:4.5.0
 
 import static java.util.stream.Collectors.toSet;
