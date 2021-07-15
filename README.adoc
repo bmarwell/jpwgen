@@ -1,0 +1,42 @@
+= jpwgen
+
+A java/jbang password generator similar to pwgen on Linux.
+
+https://opensource.org/licenses/Apache-2.0[image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License]]
+
+== Usage
+
+You can either call it via https://www.jbang.dev/[jbang] or via dot-slash-notation (hash-bang, just without the hash).
+
+[source,bash]
+----
+$ jbang jpwgen.java
+[jbang] Building jar...
+sbnzmtwetjvy
+gxfdfksiuexp
+qmcoptsdzgaw
+xbpusvfonxke
+cxjakfjeskwf
+oraczpookjjp
+zgzvmemtwqet
+xpswnrbodjto
+weqodqjjigyr
+myhuwxfbovnm
+ogjdzoenefgf
+ghcnpinwjsdp
+
+$ ./jpwgen.java 15 5 -nyc
+5YR6g9P!m;G[z,$
+(ME9S~woFno!;PJ
+KtzNf-R+qZ~x§~2
+,HJ$9;3u$z,&Wuc
+hN;§7tM.UfJr,AT
+----
+
+=== Options
+
+Options are similar to `pwgen`, with a few exceptions:
+
+* all of them can be negated.
+* default pw length is 12.
+* there is only one column.
