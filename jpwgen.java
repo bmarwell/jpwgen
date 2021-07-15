@@ -70,6 +70,7 @@ class jpwgen implements Callable<Integer> {
 
   @Override
   public Integer call() throws Exception {
+    checkParamsValid();
     generateCharPool();
     SecureRandom random = new SecureRandom();
 
@@ -87,6 +88,18 @@ class jpwgen implements Callable<Integer> {
     }
 
     return 0;
+  }
+
+  private void checkParamsValid() {
+    if (numpw < 1) {
+      System.err.println("You need to print at least one password.");
+      System.exit(1);
+    }
+
+    if (pwlength < 6) {
+      System.err.println("Your password cannot be shorter than 6 chars. That is already pretty low, actually!");
+      System.exit(1);
+    }
   }
 
   private String getPw(SecureRandom random) {
