@@ -10,22 +10,8 @@ You can either call it via https://www.jbang.dev/[jbang] or via dot-slash-notati
 
 [source,bash]
 ----
-$ jbang jpwgen.java
+$ ./jpwgen.java 15 5
 [jbang] Building jar...
-sbnzmtwetjvy
-gxfdfksiuexp
-qmcoptsdzgaw
-xbpusvfonxke
-cxjakfjeskwf
-oraczpookjjp
-zgzvmemtwqet
-xpswnrbodjto
-weqodqjjigyr
-myhuwxfbovnm
-ogjdzoenefgf
-ghcnpinwjsdp
-
-$ ./jpwgen.java 15 5 -nyc
 5YR6g9P!m;G[z,$
 (ME9S~woFno!;PJ
 KtzNf-R+qZ~x§~2
@@ -40,3 +26,7 @@ Options are similar to `pwgen`, with a few exceptions:
 * all of them can be negated.
 * default pw length is 12.
 * there is only one column.
+* [https://github.com/bmarwell/jpwgen/issues/1[#1]] use vowels (i.e. `--no-ambiguous`)
+* [https://github.com/bmarwell/jpwgen/issues/1[#1]] use symbols (i.e. `--symbols`)
+* [https://github.com/bmarwell/jpwgen/issues/1[#1]] use numerals (i.e. `--numerals`)
+* [https://github.com/bmarwell/jpwgen/issues/1[#1]] use capital chars (i.e. `--capitalize`)
