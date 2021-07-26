@@ -13,6 +13,7 @@ import java.util.concurrent.Callable;
 import java.util.stream.Stream;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
+import picocli.CommandLine.Help.Visibility;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
@@ -32,7 +33,7 @@ import picocli.CommandLine.Parameters;
 
 @Command(name = "jpwgen",
          mixinStandardHelpOptions = true,
-         version = "jpwgen 0.1",
+         version = "jpwgen 0.1.0",
          showDefaultValues = true,
          description = "jpwgen made with jbang")
 class jpwgen implements Callable<Integer> {
@@ -49,28 +50,35 @@ class jpwgen implements Callable<Integer> {
               defaultValue = "12")
   private int numpw;
 
-  @Option(names = {"-c", "--capitalize"},
+  @SuppressWarnings("FieldMayBeFinal")
+  @Option(names = {"-c", "--no-capitalize"},
           description = "Include at least one capital letter in the password",
+          showDefaultValue = Visibility.ALWAYS,
           negatable = true)
-  private boolean capitalize;
+  private boolean capitalize = true;
 
-  @Option(names = {"-n", "--numerals"},
+  @SuppressWarnings("FieldMayBeFinal")
+  @Option(names = {"-n", "--no-numerals"},
           description = "Include at least one number in the password",
+          showDefaultValue = Visibility.ALWAYS,
           negatable = true)
-  private boolean numerals;
+  private boolean numerals = true;
 
-  @Option(names = { "-y", "--symbols"},
+  @SuppressWarnings("FieldMayBeFinal")
+  @Option(names = { "-y", "--no-symbols"},
           description = "Include at least one special symbol in the password",
+          showDefaultValue = Visibility.ALWAYS,
           negatable = true)
-  private boolean symbols;
+  private boolean symbols = true;
 
   @Option(names = {"-B", "--ambiguous"},
           description = "Don't include ambiguous characters in the password",
           negatable = true)
   private boolean ambiguous;
 
-  @Option(names = {"-v", "--no-vowels"},
+  @Option(names = {"-v", "--vowels"},
           description = "Do not use any vowels so as to avoid accidental nasty words",
+          showDefaultValue = Visibility.ALWAYS,
           negatable = true)
   private boolean noVowels;
 
